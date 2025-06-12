@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ai.spring.demo.ai.playground.mapper.UndergraInfoMapper">
+
+    <resultMap id="BaseResultMap" type="ai.spring.demo.ai.playground.entity.UndergraInfo">
+            <id property="id" column="ID" jdbcType="BIGINT"/>
+            <result property="stuName" column="STU_NAME" jdbcType="VARCHAR"/>
+            <result property="stuNumber" column="STU_NUMBER" jdbcType="VARCHAR"/>
+            <result property="gender" column="GENDER" jdbcType="VARCHAR"/>
+            <result property="ethnicity" column="ETHNICITY" jdbcType="VARCHAR"/>
+            <result property="idCardNumber" column="ID_CARD_NUMBER" jdbcType="VARCHAR"/>
+            <result property="contactNumber" column="CONTACT_NUMBER" jdbcType="VARCHAR"/>
+            <result property="politicalStatus" column="POLITICAL_STATUS" jdbcType="VARCHAR"/>
+            <result property="nativeProvince" column="NATIVE_PROVINCE" jdbcType="VARCHAR"/>
+            <result property="nativeCity" column="NATIVE_CITY" jdbcType="VARCHAR"/>
+            <result property="originProvince" column="ORIGIN_PROVINCE" jdbcType="VARCHAR"/>
+            <result property="originCity" column="ORIGIN_CITY" jdbcType="VARCHAR"/>
+            <result property="parentName" column="PARENT_NAME" jdbcType="VARCHAR"/>
+            <result property="parentContactNumber" column="PARENT_CONTACT_NUMBER" jdbcType="VARCHAR"/>
+            <result property="educationLevel" column="EDUCATION_LEVEL" jdbcType="VARCHAR"/>
+            <result property="enrollmentYear" column="ENROLLMENT_YEAR" jdbcType="VARCHAR"/>
+            <result property="college" column="COLLEGE" jdbcType="VARCHAR"/>
+            <result property="major" column="MAJOR" jdbcType="VARCHAR"/>
+            <result property="majorCode" column="MAJOR_CODE" jdbcType="VARCHAR"/>
+            <result property="classId" column="CLASS_ID" jdbcType="VARCHAR"/>
+            <result property="className" column="CLASS_NAME" jdbcType="VARCHAR"/>
+            <result property="classPosition" column="CLASS_POSITION" jdbcType="VARCHAR"/>
+            <result property="otherPosition" column="OTHER_POSITION" jdbcType="VARCHAR"/>
+            <result property="instructorName" column="INSTRUCTOR_NAME" jdbcType="VARCHAR"/>
+            <result property="instructorNumber" column="INSTRUCTOR_NUMBER" jdbcType="VARCHAR"/>
+            <result property="instructorContactNumber" column="INSTRUCTOR_CONTACT_NUMBER" jdbcType="VARCHAR"/>
+            <result property="undergraduateMentorName" column="UNDERGRADUATE_MENTOR_NAME" jdbcType="VARCHAR"/>
+            <result property="undergraduateMentorNumber" column="UNDERGRADUATE_MENTOR_NUMBER" jdbcType="VARCHAR"/>
+            <result property="studentTeamLeaderName" column="STUDENT_TEAM_LEADER_NAME" jdbcType="VARCHAR"/>
+            <result property="studentTeamLeaderNumber" column="STUDENT_TEAM_LEADER_NUMBER" jdbcType="VARCHAR"/>
+            <result property="clubCode" column="CLUB_CODE" jdbcType="VARCHAR"/>
+            <result property="clubDepartment" column="CLUB_DEPARTMENT" jdbcType="VARCHAR"/>
+            <result property="clubPosition" column="CLUB_POSITION" jdbcType="VARCHAR"/>
+            <result property="dormBuildingNumber" column="DORM_BUILDING_NUMBER" jdbcType="VARCHAR"/>
+            <result property="dormCampus" column="DORM_CAMPUS" jdbcType="VARCHAR"/>
+            <result property="dormArea" column="DORM_AREA" jdbcType="VARCHAR"/>
+            <result property="dormRoomNumber" column="DORM_ROOM_NUMBER" jdbcType="VARCHAR"/>
+            <result property="grade" column="GRADE" jdbcType="VARCHAR"/>
+            <result property="createBy" column="CREATE_BY" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="UPDATE_BY" jdbcType="VARCHAR"/>
+            <result property="remark" column="REMARK" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,STU_NAME,STU_NUMBER,
+        GENDER,ETHNICITY,ID_CARD_NUMBER,
+        CONTACT_NUMBER,POLITICAL_STATUS,NATIVE_PROVINCE,
+        NATIVE_CITY,ORIGIN_PROVINCE,ORIGIN_CITY,
+        PARENT_NAME,PARENT_CONTACT_NUMBER,EDUCATION_LEVEL,
+        ENROLLMENT_YEAR,COLLEGE,MAJOR,
+        MAJOR_CODE,CLASS_ID,CLASS_NAME,
+        CLASS_POSITION,OTHER_POSITION,INSTRUCTOR_NAME,
+        INSTRUCTOR_NUMBER,INSTRUCTOR_CONTACT_NUMBER,UNDERGRADUATE_MENTOR_NAME,
+        UNDERGRADUATE_MENTOR_NUMBER,STUDENT_TEAM_LEADER_NAME,STUDENT_TEAM_LEADER_NUMBER,
+        CLUB_CODE,CLUB_DEPARTMENT,CLUB_POSITION,
+        DORM_BUILDING_NUMBER,DORM_CAMPUS,DORM_AREA,
+        DORM_ROOM_NUMBER,GRADE,CREATE_BY,
+        CREATE_TIME,UPDATE_TIME,UPDATE_BY,
+        REMARK
+    </sql>
+    <select id="selectAllStudentInfo" resultType="ai.spring.demo.ai.playground.entity.VO.StudentInfoVO">
+        select stu_number,stu_name,gender,ethnicity,contact_number,political_status,major,class_name from undergra_info
+    </select>
+</mapper>

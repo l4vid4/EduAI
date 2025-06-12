@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ai.spring.demo.ai.playground.mapper.CourseGradeMapper">
+
+    <resultMap id="BaseResultMap" type="ai.spring.demo.ai.playground.entity.CourseGrade">
+            <id property="id" column="ID" jdbcType="BIGINT"/>
+            <result property="stuNumber" column="STU_NUMBER" jdbcType="VARCHAR"/>
+            <result property="stuName" column="STU_NAME" jdbcType="VARCHAR"/>
+            <result property="courseId" column="COURSE_ID" jdbcType="VARCHAR"/>
+            <result property="courseName" column="COURSE_NAME" jdbcType="VARCHAR"/>
+            <result property="examDate" column="EXAM_DATE" jdbcType="VARCHAR"/>
+            <result property="score" column="SCORE" jdbcType="DECIMAL"/>
+            <result property="gpaScore" column="GPA_SCORE" jdbcType="DECIMAL"/>
+            <result property="credit" column="CREDIT" jdbcType="DECIMAL"/>
+            <result property="teacherName" column="TEACHER_NAME" jdbcType="VARCHAR"/>
+            <result property="teacherNumber" column="TEACHER_NUMBER" jdbcType="VARCHAR"/>
+            <result property="createBy" column="CREATE_BY" jdbcType="VARCHAR"/>
+            <result property="createTime" column="CREATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="UPDATE_TIME" jdbcType="TIMESTAMP"/>
+            <result property="updateBy" column="UPDATE_BY" jdbcType="VARCHAR"/>
+            <result property="remark" column="REMARK" jdbcType="VARCHAR"/>
+            <result property="year" column="YEAR" jdbcType="VARCHAR"/>
+            <result property="semester" column="SEMESTER" jdbcType="VARCHAR"/>
+            <result property="isRepairFree" column="IS_REPAIR_FREE" jdbcType="CHAR"/>
+            <result property="courseGradeLevel" column="COURSE_GRADE_LEVEL" jdbcType="VARCHAR"/>
+            <result property="courseCategoryName" column="COURSE_CATEGORY_NAME" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,STU_NUMBER,STU_NAME,
+        COURSE_ID,COURSE_NAME,EXAM_DATE,
+        SCORE,GPA_SCORE,CREDIT,
+        TEACHER_NAME,TEACHER_NUMBER,CREATE_BY,
+        CREATE_TIME,UPDATE_TIME,UPDATE_BY,
+        REMARK,YEAR,SEMESTER,
+        IS_REPAIR_FREE,COURSE_GRADE_LEVEL,COURSE_CATEGORY_NAME
+    </sql>
+    <select id="selectCourseGradeByStuCode" resultType="ai.spring.demo.ai.playground.entity.VO.CourseGradeVO">
+        select COURSE_NAME,SCORE,EXAM_DATE,TEACHER_NAME from COURSE_GRADE where STU_NUMBER = #{stuCode}
+    </select>
+</mapper>
