@@ -1,9 +1,9 @@
-package ai.spring.demo.ai.playground.services;
+package io.github.l4vid4.ai.assistant.services;
 
-import ai.spring.demo.ai.playground.entity.CourseGrade;
-import ai.spring.demo.ai.playground.entity.UndergraInfo;
-import ai.spring.demo.ai.playground.mapper.CourseGradeMapper;
-import ai.spring.demo.ai.playground.mapper.UndergraInfoMapper;
+import io.github.l4vid4.ai.assistant.entity.CourseGrade;
+import io.github.l4vid4.ai.assistant.entity.UndergraInfo;
+import io.github.l4vid4.ai.assistant.mapper.CourseGradeMapper;
+import io.github.l4vid4.ai.assistant.mapper.UndergraInfoMapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.beans.factory.annotation.Autowired;

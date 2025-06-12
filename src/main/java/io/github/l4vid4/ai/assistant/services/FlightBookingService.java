@@ -1,6 +1,6 @@
-package ai.spring.demo.ai.playground.services;
+package io.github.l4vid4.ai.assistant.services;
 
-import ai.spring.demo.ai.playground.data.*;
+import io.github.l4vid4.ai.assistant.data.*;
 
 import org.springframework.stereotype.Service;
 

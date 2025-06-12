@@ -1,6 +1,6 @@
-package ai.spring.demo.ai.playground.services;
+package io.github.l4vid4.ai.assistant.services;
 
-import ai.spring.demo.ai.playground.data.BookingDetails;
+import io.github.l4vid4.ai.assistant.data.BookingDetails;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ai.chat.model.ToolContext;

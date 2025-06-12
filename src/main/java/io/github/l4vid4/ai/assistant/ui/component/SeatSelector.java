@@ -1,4 +1,4 @@
-package ai.spring.demo.ai.playground.ui.component;
+package io.github.l4vid4.ai.assistant.ui.component;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEvent;

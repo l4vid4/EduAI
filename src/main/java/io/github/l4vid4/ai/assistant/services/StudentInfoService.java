@@ -1,11 +1,11 @@
-package ai.spring.demo.ai.playground.services;
+package io.github.l4vid4.ai.assistant.services;
 
-import ai.spring.demo.ai.playground.entity.CourseGrade;
-import ai.spring.demo.ai.playground.entity.UndergraInfo;
-import ai.spring.demo.ai.playground.entity.VO.CourseGradeVO;
-import ai.spring.demo.ai.playground.entity.VO.StudentInfoVO;
-import ai.spring.demo.ai.playground.service.CourseGradeService;
-import ai.spring.demo.ai.playground.service.UndergraInfoService;
+import io.github.l4vid4.ai.assistant.entity.CourseGrade;
+import io.github.l4vid4.ai.assistant.entity.UndergraInfo;
+import io.github.l4vid4.ai.assistant.entity.VO.CourseGradeVO;
+import io.github.l4vid4.ai.assistant.entity.VO.StudentInfoVO;
+import io.github.l4vid4.ai.assistant.service.CourseGradeService;
+import io.github.l4vid4.ai.assistant.service.UndergraInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

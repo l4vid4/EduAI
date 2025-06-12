@@ -1,4 +1,4 @@
 @NonNullApi
-package ai.spring.demo.ai.playground.data;
+package io.github.l4vid4.ai.assistant.data;
 
 import org.springframework.lang.NonNullApi;

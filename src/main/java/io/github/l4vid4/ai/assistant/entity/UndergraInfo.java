@@ -1,4 +1,4 @@
-package ai.spring.demo.ai.playground.entity;
+package io.github.l4vid4.ai.assistant.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

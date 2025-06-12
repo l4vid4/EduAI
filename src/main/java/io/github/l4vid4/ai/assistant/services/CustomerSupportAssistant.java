@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package ai.spring.demo.ai.playground.services;
+package io.github.l4vid4.ai.assistant.services;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;

@@ -1,4 +1,4 @@
-package ai.spring.demo.ai.playground.entity.VO;
+package io.github.l4vid4.ai.assistant.entity.VO;
 
 import lombok.Data;
 

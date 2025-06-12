@@ -1,7 +1,7 @@
-package ai.spring.demo.ai.playground.service;
+package io.github.l4vid4.ai.assistant.service;
 
-import ai.spring.demo.ai.playground.entity.UndergraInfo;
-import ai.spring.demo.ai.playground.entity.VO.StudentInfoVO;
+import io.github.l4vid4.ai.assistant.entity.UndergraInfo;
+import io.github.l4vid4.ai.assistant.entity.VO.StudentInfoVO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

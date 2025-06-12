@@ -1,9 +1,9 @@
-package ai.spring.demo.ai.playground.ui.view;
+package io.github.l4vid4.ai.assistant.ui.view;
 
-import ai.spring.demo.ai.playground.data.BookingDetails;
-import ai.spring.demo.ai.playground.services.CustomerSupportAssistant;
-import ai.spring.demo.ai.playground.services.FlightBookingService;
-import ai.spring.demo.ai.playground.ui.component.SeatSelector;
+import io.github.l4vid4.ai.assistant.data.BookingDetails;
+import io.github.l4vid4.ai.assistant.services.CustomerSupportAssistant;
+import io.github.l4vid4.ai.assistant.services.FlightBookingService;
+import io.github.l4vid4.ai.assistant.ui.component.SeatSelector;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.DetachEvent;

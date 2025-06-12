@@ -1,10 +1,10 @@
-package ai.spring.demo.ai.playground.service.impl;
+package io.github.l4vid4.ai.assistant.service.impl;
 
-import ai.spring.demo.ai.playground.entity.VO.StudentInfoVO;
+import io.github.l4vid4.ai.assistant.entity.VO.StudentInfoVO;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import ai.spring.demo.ai.playground.entity.UndergraInfo;
-import ai.spring.demo.ai.playground.service.UndergraInfoService;
-import ai.spring.demo.ai.playground.mapper.UndergraInfoMapper;
+import io.github.l4vid4.ai.assistant.entity.UndergraInfo;
+import io.github.l4vid4.ai.assistant.service.UndergraInfoService;
+import io.github.l4vid4.ai.assistant.mapper.UndergraInfoMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

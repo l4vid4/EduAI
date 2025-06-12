@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="ai.spring.demo.ai.playground.mapper.CourseGradeMapper">
+<mapper namespace="io.github.l4vid4.ai.assistant.mapper.CourseGradeMapper">
 
-    <resultMap id="BaseResultMap" type="ai.spring.demo.ai.playground.entity.CourseGrade">
+    <resultMap id="BaseResultMap" type="io.github.l4vid4.ai.assistant.entity.CourseGrade">
             <id property="id" column="ID" jdbcType="BIGINT"/>
             <result property="stuNumber" column="STU_NUMBER" jdbcType="VARCHAR"/>
             <result property="stuName" column="STU_NAME" jdbcType="VARCHAR"/>
@@ -37,7 +37,7 @@
         REMARK,YEAR,SEMESTER,
         IS_REPAIR_FREE,COURSE_GRADE_LEVEL,COURSE_CATEGORY_NAME
     </sql>
-    <select id="selectCourseGradeByStuCode" resultType="ai.spring.demo.ai.playground.entity.VO.CourseGradeVO">
+    <select id="selectCourseGradeByStuCode" resultType="io.github.l4vid4.ai.assistant.entity.VO.CourseGradeVO">
         select COURSE_NAME,SCORE,EXAM_DATE,TEACHER_NAME from COURSE_GRADE where STU_NUMBER = #{stuCode}
     </select>
 </mapper>
