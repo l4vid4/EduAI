@@ -1,27 +1,28 @@
-# AI powered expert system demo
+# 基于SpringAI实现的专家系统
 
-Spring AI re-implementation of https://github.com/marcushellberg/java-ai-playground
+项目参考了 https://github.com/marcushellberg/java-ai-playground
 
-This app shows how you can use [Spring AI](https://github.com/spring-projects/spring-ai) to build an AI-powered system that:
+此应用展示了如何使用 [Spring AI](https://github.com/spring-projects/spring-ai) 构建一个 AI 驱动的系统：
 
-- Has access to terms and conditions (retrieval augmented generation, RAG)
-- Can access tools (Java methods) to perform actions (Function Calling)
-- Uses an LLM to interact with the user
+- 可以访问条款和条件（检索增强生成，RAG）
+- 可以访问工具（Java 方法）来执行操作（函数调用）
+- 使用 LLM 与用户交互
+- 可以访问数据库查询数据
 
 ![alt text](diagram.jpg)
 
-## Requirements
+## 环境要求
 
 - Java 17+
-- OpenAI API key in `OPENAI_API_KEY` environment variable
+- 在application.properties中配置api_key
 
-## Running
+## 启动
 
-Run the app by running `Application.java` in your IDE or `mvn` in the command line.
+运行`Application.java`即可。
 
-### With OpenAI Chat
+### 使用Open ai（需要购买及科学上网）
 
-Add to the POM the Spring AI Open AI boot starter:
+- pom中引入依赖:
 
 ```xml
 <dependency>
@@ -30,16 +31,34 @@ Add to the POM the Spring AI Open AI boot starter:
 </dependency>
 ```
 
-Add the OpenAI configuraiton to the `applicaiton.properties`:
+配置文件`applicaiton.properties`中填写api_key和选择的模型:
 
 ```
 spring.ai.openai.api-key=${OPENAI_API_KEY}
 spring.ai.openai.chat.options.model=gpt-4o
 ```
 
-### WIth VertexAI Geminie Chat
+### 使用智普AI
 
-Add to the POM the Spring AI VertexAI Gemeni and Onnx Transfomer Embedding boot starters:
+- pom中有引入依赖：
+
+  ```xml
+  <dependency>
+      <groupId>org.springframework.ai</groupId>
+      <artifactId>spring-ai-starter-model-zhipuai</artifactId>
+  </dependency>
+  ```
+
+- 添加智普AI的配置
+
+  ```properties
+  spring.ai.zhipuai.api-key=
+  spring.ai.zhipuai.chat.options.model=glm-4-long
+  ```
+
+### 使用 VertexAI Gemini Chat
+
+在 pom 中添加 Spring AI 的 VertexAI Gemini 和 ONNX 转换器依赖：
 
 ```xml
 <dependency>
@@ -53,7 +72,7 @@ Add to the POM the Spring AI VertexAI Gemeni and Onnx Transfomer Embedding boot 
 </dependency>
 ```
 
-Add the VertexAI Gemini configuraiton to the `applicaiton.properties`:
+在 `application.properties` 中添加 VertexAI Gemini 的配置：
 
 ```
 spring.ai.vertex.ai.gemini.project-id=${VERTEX_AI_GEMINI_PROJECT_ID}
@@ -62,9 +81,9 @@ spring.ai.vertex.ai.gemini.chat.options.model=gemini-1.5-pro-001
 # spring.ai.vertex.ai.gemini.chat.options.model=gemini-1.5-flash-001
 ```
 
-### With Azure OpenAI Chat
+### 使用 Azure OpenAI Chat
 
-Add to the POM the Spring AI Azure OpenAI boot starter:
+在 pom 中添加 Spring AI 的 Azure OpenAI 启动器依赖：
 
 ```xml
 <dependency>
@@ -73,7 +92,7 @@ Add to the POM the Spring AI Azure OpenAI boot starter:
 </dependency>
 ```
 
-Add the Azure OpenAI configuraiton to the `applicaiton.properties`:
+在 `application.properties` 中添加 Azure OpenAI 的配置：
 
 ```
 spring.ai.azure.openai.api-key=${AZURE_OPENAI_API_KEY}
@@ -81,11 +100,11 @@ spring.ai.azure.openai.endpoint=${AZURE_OPENAI_ENDPOINT}
 spring.ai.azure.openai.chat.options.deployment-name=gpt-4o
 ```
 
-### With Groq Chat
+### 使用 Groq Chat
 
-It reuses the OpenAI Chat client but ponted to the Groq endpont
+它复用了 OpenAI Chat 客户端，只是将地址指向 Groq 的接口。
 
-Add to the POM the Spring AI Open AI boot starter:
+在 pom 中添加 Spring AI 的 OpenAI 启动器依赖：
 
 ```xml
 <dependency>
@@ -98,7 +117,7 @@ Add to the POM the Spring AI Open AI boot starter:
 </dependency>
 ```
 
-Add the Groq configuraiton to the `applicaiton.properties`:
+在 `application.properties` 中添加 Groq 的配置：
 
 ```
 spring.ai.openai.api-key=${GROQ_API_KEY}
@@ -106,9 +125,9 @@ spring.ai.openai.base-url=https://api.groq.com/openai
 spring.ai.openai.chat.options.model=llama3-70b-8192
 ```
 
-### With Anthropic Claude 3 Chat
+### 使用 Anthropic Claude 3 Chat
 
-Add to the POM the Spring AI Anthropic Claude and Onnx Transfomer Embedding boot starters:
+在 pom 中添加 Spring AI 的 Anthropic Claude 和 ONNX 转换器依赖：
 
 ```xml
 <dependency>
@@ -122,7 +141,7 @@ Add to the POM the Spring AI Anthropic Claude and Onnx Transfomer Embedding boot
 </dependency>
 ```
 
-Add the Anthropic configuration to the `application.properties`:
+在 `application.properties` 中添加 Anthropic 的配置：
 
 ```
 spring.ai.anthropic.api-key=${ANTHROPIC_API_KEY}
@@ -131,7 +150,7 @@ spring.ai.anthropic.chat.options.model=claude-3-5-sonnet-20240620
 ```
 
 
-## Build Jar
+## 构建 Jar 包
 
 ```shell
 ./mvnw clean install -Pproduction
@@ -140,6 +159,8 @@ spring.ai.anthropic.chat.options.model=claude-3-5-sonnet-20240620
 ```shell
 java -jar ./target/playground-flight-booking-0.0.1-SNAPSHOT.jar
 ```
+
+使用 Docker 运行向量数据库：
 
 
 ```
