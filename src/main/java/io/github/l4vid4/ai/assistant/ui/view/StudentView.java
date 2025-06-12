@@ -1,12 +1,10 @@
 package io.github.l4vid4.ai.assistant.ui.view;
 
-import io.github.l4vid4.ai.assistant.data.BookingDetails;
 import io.github.l4vid4.ai.assistant.entity.UndergraInfo;
 import io.github.l4vid4.ai.assistant.entity.VO.CourseGradeVO;
 import io.github.l4vid4.ai.assistant.entity.VO.StudentInfoVO;
 import io.github.l4vid4.ai.assistant.service.UndergraInfoService;
 import io.github.l4vid4.ai.assistant.services.CustomerSupportAssistant;
-import io.github.l4vid4.ai.assistant.services.FlightBookingService;
 import io.github.l4vid4.ai.assistant.services.StudentInfoService;
 import io.github.l4vid4.ai.assistant.ui.component.SeatSelector;
 import com.vaadin.flow.component.AttachEvent;
@@ -31,7 +29,7 @@ import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-@Route("/stu")
+@Route("")
 public class StudentView extends SplitLayout {
 
     private StudentInfoService studentInfoService;
