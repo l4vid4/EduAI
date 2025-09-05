@@ -1,12 +1,12 @@
 # 基于SpringAI实现的专家系统
 
-## 技术亮点
+## 一、技术亮点
 - Spring AI + Vector Store + RAG：使用 ETL → 嵌入 → 存储 → 检索 → 生成，确保模型能处理本地结构化数据。
 - Tool Calling：自定义函数方法可被大模型自动识别调用，实现查询与展示分离。
 - Vaadin UI：大模型可以调用vaadin的方法，实现操作前端页面。
 - SpringAI + SpringBoot + MyBatis-Plus：实现大模型轻松访问数据库查询数据。
 
-## 功能举例
+## 二、功能举例
 ### 学号／姓名查询学生信息
 - 用户输入“查一下学号 20231234，姓名 张三 的信息”
 - 聊天模型匹配 getStudentInfo 工具
@@ -25,11 +25,11 @@
 - 调用 getClassAnalytics(classId)，生成平均分、分布图等数据
 - 前端基于结果绘制图表，直观展示班级整体表现
 
-## 环境要求
+## 三、环境要求
 - Java 17+
-- 在application.properties中配置api_key
+- docker
 
-## 快速开始
+## 四、；快速开始
 
 ### 克隆项目到本地
 ```shell
