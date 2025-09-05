@@ -29,13 +29,13 @@
 - Java 17+
 - docker
 
-## 四、；快速开始
+## 四、快速开始
 
-### 克隆项目到本地
+### 1、克隆项目到本地
 ```shell
 git clone https://github.com/l4vid4/EduAI.git
 ```
-### 选择模型并引入依赖和配置
+### 2、选择模型并引入依赖和配置
 #### OpenAI
 - pom中引入依赖:
 ```xml
@@ -63,11 +63,11 @@ spring.ai.openai.chat.options.model=gpt-4o
 spring.ai.zhipuai.api-key=
 spring.ai.zhipuai.chat.options.model=glm-4-long
 ```
-### 修改 resources/rag 文件夹下的 RAG 文件，配置知识库
+### 3、修改 resources/rag 文件夹下的 RAG 文件，配置知识库
 
-### 使用 Docker 运行向量数据库：
+### 4、使用 Docker 运行向量数据库：
 ```
 docker run -it --rm --name postgres -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres ankane/pgvector
 ```
-### 启动项目
+### 5、启动项目
 运行 Application.java 即可
